@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Account</title>
+</head>
+<body ng-controller="EditUserController">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                Update User Account
+            </h3>
+            <ul class="page-breadcrumb breadcrumb">
+                <li>
+                    <i class="icon-home"></i>
+                    <a href="@Url.Action("Index","Membership")">Home</a>
+                    <i class="icon-angle-right"></i>
+                </li>
+
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN DASHBOARD STATS -->
+    <div class="row">
+    </div>
+    <!-- END DASHBOARD STATS -->
+
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <!-- BEGIN PORTLET-->
+            <div class="portlet box grey">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-cog"></i>This page will allow you to update an User.</div>
+                </div>
+                <div class="portlet-body form">
+
+                    <div class="form-horizontal">
+                        <div class="form-body">
+                            <h3 class="form-section">Account Information</h3>
+                            <div class="row">
+                                <div class="col-md-3">
+
+                                    <div class="form-group">
+                                        <label class="control-label visible-ie8 visible-ie9">First Name</label>
+                                        <div class="input-icon">
+                                            <i class="fa fa-user"></i>
+                                            <div><input type="text" autocomplete="off" placeholder="First Name" name="FirstName" class="form-control placeholder-no-fix" ng-model="FirstName" required /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="control-label visible-ie8 visible-ie9">Last Name</label>
+                                    <div class="input-icon">
+                                        <i class="fa fa-lock"></i>
+                                        <div><input type="text" autocomplete="off" placeholder="Last Name" name="LastName" class="form-control placeholder-no-fix" ng-model="LastName" required /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label visible-ie8 visible-ie9">Gender</label>
+                                    <label><input type="radio" name="SGender" ng-change="RadioChange('Male')" ng-model="Gender" value="Male" /> Male </label>
+                                    <label><input type="radio" name="SGender" ng-change="RadioChange('Female')" ng-model="Gender" value="Female" /> Female </label>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+
+                                        <label class="control-label visible-ie8 visible-ie9">Date of Birth</label>
+                                        <div class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                            <div><input type="date" autocomplete="off" placeholder="Date of Birth" name="DateofBirth" class="form-control placeholder-no-fix" ng-model="DateofBirth" required /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label visible-ie8 visible-ie9">Mobile Number</label>
+                                        <div class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                            <div><input type="number" autocomplete="off" placeholder="Mobile Number" name="MobileNumber" class="form-control placeholder-no-fix" ng-model="MobileNumber" required /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label visible-ie8 visible-ie9">Email Id</label>
+                                        <div class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                            <div><input type="email" autocomplete="off" placeholder="Email Id" name="EmailID" class="form-control placeholder-no-fix" ng-model="EmailID" readonly="readonly" required /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label visible-ie8 visible-ie9">Password</label>
+                                        <div class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                            <div><input type="password" autocomplete="off" placeholder="Password" name="Password" class="form-control placeholder-no-fix" ng-model="Password" required /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-actions right">
+                        <a href="@Url.Action("Index", "Membership")" class="btn default">Cancel</a>
+                        <input type="submit" id="btnSubmit" class="btn blue" value="Update" ng-click="updateuser()">
+                    </div>
+            
+                    <!-- END PORTLET-->
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- END PAGE -->
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript">
+    $('#UserName').keydown(function (event) {
+        var key = event.keyCode || event.charCode;
+        if (key == 32)
+            return false;
+    });
+    //$('#PasswordHash').keydown(function (event) {
+    //    var key = event.keyCode || event.charCode;
+    //    if (key == 32)
+    //        return false;
+    //});
+    //$('#ConfirmPassword').keydown(function (event) {
+    //    var key = event.keyCode || event.charCode;
+    //    if (key == 32)
+    //        return false;
+    //});
+</script>
