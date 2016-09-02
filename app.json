@@ -1,15 +1,15 @@
-{
+{  
    "name":"ASP.NET Core MySQL AngularJS Website",
    "description":"ASP.NET Core MySQL AngularJS  website",
    "website":"http://www.softtrends.com/",
    "repository":"https://github.com/heroku-softtrends/dotnetcore-mysql-angular-sample",
    "logo":"https://avatars2.githubusercontent.com/u/20908829?v=3&s=150",
-   "keywords":[
+   "keywords":[  
       "aspnet core",
       "aspnet core mysql angularjs"
    ],
-   "buildpacks":[
-      {
+   "buildpacks":[  
+      {  
          "url":"https://github.com/heroku-softtrends/dotnetcore.mysql.buildpack.git"
       }
    ]
